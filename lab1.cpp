@@ -19,26 +19,27 @@
 // }
 
 //Task 2
-#include<iostream>
-using namespace std;
-int main() {
-    int a[10];
-    for (int i = 0; i < 10; i++) {
-        cout << "Enter number " << i + 1 << ": ";	        cin >> a[i];
-    }
-    for (int i = 0; i < 9; i++) {
-       for (int j= i+1; j<10; j++) {
-            if (a[i] > a[j]) {
-                int temp = a[i];
-                a[i] = a[j];
-                a[j] = temp;
-            }
-        }
-    }
-    for (int i = 0; i < 10; i++) {
-        cout << a[i] << " ";
-    }
-}
+// #include<iostream>
+// using namespace std;
+// int main() {
+//     int a[10];
+//     for (int i = 0; i < 10; i++) {
+//         cout << "Enter number " << i + 1 << ": ";
+//         cin >> a[i];
+//     }
+//     for (int i = 0; i < 9; i++) {
+//        for (int j= i+1; j<10; j++) {
+//             if (a[i] > a[j]) {
+//                 int temp = a[i];
+//                 a[i] = a[j];
+//                 a[j] = temp;
+//             }
+//         }
+//     }
+//     for (int i = 0; i < 10; i++) {
+//         cout << a[i] << " ";
+//     }
+// }
 
 
 //Task 3
