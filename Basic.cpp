@@ -63,24 +63,24 @@
 // }
 
 //Task 4
-// #include <iostream>
-// struct Student {
-//     int id;
-//     std::string name;
-//     int age;
-// };
-// int main() {
-//     Student* studt = new Student;
-//     std::cout << "Enter Student ID: ";
-//     std::cin >> studt->id; 
-//     std::cout << "Enter Student name: ";
-//     std::cin >> studt->name;
-//     std::cout << "Enter Student age: ";
-//     std::cin >> studt->age;
+#include <iostream>
+struct Student {
+    int id;
+    std::string name;
+    int age;
+};
+int main() {
+    Student* studt = new Student;
+    std::cout << "Enter Student ID: ";
+    std::cin >> studt->id; 
+    std::cout << "Enter Student name: ";
+    std::cin >> studt->name;
+    std::cout << "Enter Student age: ";
+    std::cin >> studt->age;
 
-//     std::cout << "Student Id: " << studt->id
-//               << "\nStudent Name: " << studt->name
-//               << "\nStudent Age: " << studt->age;
-//     delete studt;
-//     return 0;
-// }
+    std::cout << "Student Id: " << studt->id
+              << "\nStudent Name: " << studt->name
+              << "\nStudent Age: " << studt->age;
+    delete studt;
+    return 0;
+}
