@@ -38,6 +38,26 @@ private:
     vector<Patient> patients;
     int nextId;
 
+    int binarySearch(int searchId) {
+        int left = 0;
+        int right = patients.size() - 1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            if (patients[mid].getId() == searchId) {
+                return mid;
+            }
+
+            if (patients[mid].getId() < searchId) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return -1;
+    }
+
 public:
     HospitalManagement() : nextId(1) {
         srand(time(0));
@@ -67,13 +87,13 @@ public:
         cout << "Enter Patient ID to search: ";
         cin >> searchId;
 
-        for (const Patient& p : patients) {
-            if (p.getId() == searchId) {
-                displayPatientDetails(p);
-                return;
-            }
+        int index = binarySearch(searchId);
+        
+        if (index != -1) {
+            displayPatientDetails(patients[index]);
+        } else {
+            cout << "Patient not found!\n";
         }
-        cout << "Patient not found!\n";
     }
 
     void makePayment() {
